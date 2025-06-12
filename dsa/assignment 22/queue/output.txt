@@ -1,0 +1,31 @@
+-------------Testing Linked-List based Queue-------------
+Enqueued 10 onto the queue.
+Current queue: 10 
+-------------------
+Enqueued 20 onto the queue.
+Current queue: 10 20 
+-------------------
+Enqueued 30 onto the queue.
+Current queue: 10 20 30 
+-------------------
+Enqueued 40 onto the queue.
+Current queue: 10 20 30 40 
+-------------------
+Dequeued value: 10
+Current queue: 20 30 40 
+-------------------
+Dequeued value: 20
+Current queue: 30 40 
+-------------------
+Peek value: 30
+Current queue: 30 40 
+-------------------
+Current queue length: 2
+Current queue: 30 40 
+-------------------
+Is queue empty? No
+Current queue: 30 40 
+-------------------
+Cleared the queue.
+Current queue: 
+-------------------

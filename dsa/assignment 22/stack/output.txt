@@ -1,0 +1,22 @@
+-------------Testing Stack with Sorting-------------
+Test Case 1:
+Current stack: 1340 
+Current stack: 1340 12 
+Current stack: 1340 42 12 
+Current stack: 1340 42 12 5 
+-------------------
+Test Case 2:
+Current stack: 11 
+Current stack: 11 3 
+Current stack: 12 11 3 
+Current stack: 12 11 4 3 
+Current stack: 12 11 4 3 3 
+-------------------
+Test Case 3:
+Current stack: 10 
+Current stack: 10 10 
+Current stack: 10 10 10 
+-------------------
+Test Case 4:
+Current stack: 100 
+-------------------

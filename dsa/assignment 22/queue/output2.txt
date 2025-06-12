@@ -1,0 +1,31 @@
+-------------Testing Array-based Queue-------------
+Enqueueed 10 onto the queue.
+Current queue: 10 
+-------------------
+Enqueueed 20 onto the queue.
+Current queue: 10 20 
+-------------------
+Enqueueed 30 onto the queue.
+Current queue: 10 20 30 
+-------------------
+Enqueueed 40 onto the queue.
+Current queue: 10 20 30 40 
+-------------------
+Dequeueped value: 10
+Current queue: 20 30 40 
+-------------------
+Dequeueped value: 20
+Current queue: 30 40 
+-------------------
+Peek value: 30
+Current queue: 30 40 
+-------------------
+Current queue length: 2
+Current queue: 30 40 
+-------------------
+Is queue empty? No
+Current queue: 30 40 
+-------------------
+Cleared the queue.
+Current queue: 
+-------------------
