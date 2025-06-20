@@ -27,7 +27,58 @@ int main(int argc, char **argv) {
         // Handle exceptions where necessary and print appropriate error messages
 
         // Start your code here
-
+        if(c=='I'){
+            in_file>>val;
+            if(bst->insert(val,val)){
+                cout<<"Key"<<val<<" inserted into BST,";
+            }
+            else{
+                cout<<"Removal failed! Key"<<val<<" already exists in BST,";
+            }
+               bst->print();  
+            
+        }
+        else if(c=='D'){
+             in_file>>val;
+            if(bst->remove(val)){
+               cout<<"Key"<<val<<" removed from BST,";
+            }
+            else{
+                cout<<"Removal failed! Key"<<val<<" not found in BST,";
+            }
+              bst->print();  
+            
+        }
+        else if(c=='F'){
+             in_file>>val;
+           if( bst->find(val)){
+            cout<<"key"<<val<<" found in BST,";
+           }
+           else{
+            cout<<"key"<<val<<" not found in BST,";
+           }
+           cout<<endl;
+        }
+        else if(c=='M'){
+            in_file>>str;
+            if(str[1]=='i') cout<<"Minimum value: "<<bst->find_min()<<endl;
+            else cout<<"Maximum value: "<<bst->find_max()<<endl;
+        }
+        else if(c=='E'){
+            if(bst->empty()) cout<<"Empty";
+            else cout<<"Not- Empty";
+            cout<<endl;
+        }
+        else if(c=='S'){
+           cout<<"Size: "<<bst->size()<<endl;
+        }
+        else if(c=='T'){
+            in_file>>str;
+            if(str[0]== 'I') bst->print(str[0]);
+            else if (str[0]=='P' && str[1]== 'r') bst->print(str[0]);
+            else bst->print('O');
+        }
+        
         // End your code here
     }
     in_file.close();
