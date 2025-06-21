@@ -52,17 +52,21 @@ int main(int argc, char **argv) {
         else if(c=='F'){
              in_file>>val;
            if( bst->find(val)){
-            cout<<"key"<<val<<" found in BST,";
+            cout<<"key"<<val<<" found in BST.";
            }
            else{
-            cout<<"key"<<val<<" not found in BST,";
+            cout<<"key"<<val<<" not found in BST.";
            }
            cout<<endl;
         }
         else if(c=='M'){
+            try{
             in_file>>str;
             if(str[1]=='i') cout<<"Minimum value: "<<bst->find_min()<<endl;
             else cout<<"Maximum value: "<<bst->find_max()<<endl;
+            }catch(const exception &e){
+                cout<<e.what()<<endl;
+            }
         }
         else if(c=='E'){
             if(bst->empty()) cout<<"Empty";
