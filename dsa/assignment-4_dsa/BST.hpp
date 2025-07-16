@@ -2,7 +2,7 @@
 #define BST_H
 
 #include <iostream>
-
+#include<algorithm>
 /**
  * Abstract Binary Search Tree
  * Template class for generic key-value pairs
@@ -98,6 +98,7 @@ public:
      * @throws std::invalid_argument if traversal_type is invalid
      */
     virtual void print(char traversal_type = 'D') const = 0;
+    virtual int hayre_diameter() const =0;
 
 };
 

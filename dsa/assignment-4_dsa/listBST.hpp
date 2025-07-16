@@ -1,10 +1,10 @@
 #ifndef LISTBST_H
 #define LISTBST_H
-
+#include<math.h>
 #include "BST.hpp"
 #include <iostream>
 #include <stdexcept>
-
+#include<algorithm>
 /**
  * Binary Search Tree implementation using linked list structure
  *
@@ -25,6 +25,7 @@ private:
         Value value;
         Node *left;
         Node *right;
+        int height;
 
         Node(Key k, Value v) : key(k), value(v), left(nullptr), right(nullptr) {}
     };
@@ -34,6 +35,13 @@ private:
 
     // TODO: Implement private helper functions as needed
     // Start your private helper functions here
+    int getHeight(Node* node){
+        if(node == nullptr) return -1;
+        return node->height;
+    }
+    void updateheight(Node* node){
+        if(node != nullptr) node->height = max(getHeight(node->left), getHeight(node->right))+1;
+    }
     bool insertHelp(Node *cur, Key k, Value v)
     {
         if (k == cur->key)
@@ -389,6 +397,177 @@ public:
         }
         std::cout << std::endl;
     }
+
+    Key secondmax(Node *cur)
+    {
+        if (cur == nullptr)
+            return -1;
+        Node *temp;
+        while (cur->right != nullptr)
+        {
+            temp = cur;
+            cur = cur->right;
+        }
+        if (cur->left)
+        {
+            cur = cur->left;
+            while (cur->right != nullptr)
+            {
+                cur = cur->right; // Go to the rightmost node in the left subtree
+            }
+            return cur->key;
+           
+        }
+        else
+        {
+            return temp->key;
+        }
+    }
+
+    Node *lca(Node *node, int a, int b)
+    {
+        if (node == nullptr)
+            return nullptr;
+        if (a > node->key && b > node->key)
+            return lca(node->right, a, b);
+        else if (a < node->key && b < node->key)
+            return lca(node->left, a, b);
+        else
+            return node;
+    }
+
+    int countInrange(Node *node, int start, int end)
+    {
+        if (node == nullptr)
+            return 0;
+        if (node->key < start)
+            return countInrange(node->right, start, end);
+        if (node->key > end)
+            return countInrange(node->left, start, end);
+        else
+            return 1 + countInrange(node->right, start, end) + countInrange(node->left, start, end);
+    }
+
+
+    int index = 0; // Global variable to track in-order index
+    int arr[1000]; // Static array to hold the in-order traversal elements (assuming tree size <= 1000)
+
+    void inorder(Node *node)
+    {
+        if (node == nullptr)
+            return;
+        inorder(node->left);
+        arr[index++] = node->key; // Store the current node key in the array
+        inorder(node->right);
+    }
+
+    
+    int kthSmallest(Node *root, int k)
+    {
+        index = 0;         // Reset the index before starting the traversal
+        inorder(root);     // Perform in-order traversal to fill the array
+        return arr[k - 1]; // Return the k-th smallest element (0-indexed, so we use k-1)
+    }
+
+
+    // int find_height(Node *node)
+    // {
+    //     if (node == nullptr)
+    //         return -1;
+    //     int left = find_height(node->left);
+    //     int right = find_height(node->right);
+    //     return max(left, right) + 1;
+    // }
+
+
+    bool isbalanced(Node *root)
+    {
+        if (root == nullptr)
+            return false;
+        int left = find_height(root->left);
+        int right = find_height(root->right);
+        if (abs(left - right) <= 1)
+        {
+            retrun(isbalanced(root->left) && isbalanced(root->right));
+        }
+        return false;
+    }
+
+
+
+    Node *inorderSuccessor(Node *root, Node *n)
+    {
+        if (n->right)
+            return find_min(n->right);
+        Node *succ = nullptr;
+        while (root)
+        {
+            if (n->key < root->key)
+            {
+                succ = root;
+                root = root->left;
+            }
+            else if (n->key > root->key)
+            {
+                root = root->right;
+            }
+            else
+            {
+                break;
+            }
+        }
+        return succ;
+    }
+
+
+    bool isSubTreeGreater(Node* node, int data){
+        if(node == nullptr) return false;
+        if(node->key >= data && isSubTreeGreater(node->left, data) && isSubTreeGreater(node->right,data)) return true;
+        return false;
+    }
+    bool isSubTreeLesser(Node* node, int data){
+        if(node == nullptr) return false;
+        if(node->key <= data && isSubTreeLesser(node->left, data) && isSubTreeLesser(node->right,data)) return true;
+        return false;
+    }
+    bool isBST(Node* root){
+        if(root == nullptr) return true;
+        if(isSubTreeGreater(root->left,root->key) && isSubTreeLesser(root->right,root->key)
+        && isBST(root->left) && isBST(root->right)) return true;
+        else return false;
+
+    }
+
+
+    void mirrorBST(Node * node){
+        if(node == nullptr) return;
+        mirrorBST(node->left);
+        mirrorBST(node->right);
+        Node* temp = node->left;
+        node->left=node->right;
+        node->right=temp;
+    }
+
+
+//  bool check_sublist(Node* root, int[] list, int n){
+//     if(root == nullptr) return;
+//     check_sublist(root->left, list, n);
+//     //smtg
+//     check_sublist(root->right, list, n);
+    
+//  }
+ int calculate_diameter(Node* node, int& res) const{
+    if(node == nullptr) return 0;
+    int lheight = calculate_diameter(node->left,res);
+    int rheight = calculate_diameter(node->right, res);
+    res = res >( lheight+rheight)?  res : (lheight+rheight);
+    return ((lheight>rheight)?lheight:rheight)+1;
+ }
+ int hayre_diameter() const {
+    int res =0;
+    calculate_diameter(root, res);
+    return res;
+ }
 };
 
 #endif // LISTBST_H

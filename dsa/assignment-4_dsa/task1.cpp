@@ -16,7 +16,7 @@ int main(int argc, char **argv) {
     }
     char c, str[5];
     int val;
-    BST<int, int> *bst = new ListBST<int, int>();
+    ListBST<int, int> *bst = new ListBST<int, int>();
     if (!bst) {
         cerr << "Memory allocation failed\n";
         return 3;
@@ -36,6 +36,7 @@ int main(int argc, char **argv) {
                 cout<<"Removal failed! Key"<<val<<" already exists in BST,";
             }
                bst->print();  
+               
             
         }
         else if(c=='D'){
@@ -72,6 +73,7 @@ int main(int argc, char **argv) {
             if(bst->empty()) cout<<"Empty";
             else cout<<"Not- Empty";
             cout<<endl;
+            bst.
         }
         else if(c=='S'){
            cout<<"Size: "<<bst->size()<<endl;
@@ -83,7 +85,8 @@ int main(int argc, char **argv) {
             else bst->print('O');
         }
         
-        // End your code here
+      cout<<bst->hayre_diameter()<<endl;
+
     }
     in_file.close();
     delete bst;

@@ -1,0 +1,64 @@
+key1 not found in BST.
+0
+Empty
+0
+Key8 inserted into BST,BST (Default): (8:8)
+0
+Key10 inserted into BST,BST (Default): (8:8 () (10:10))
+1
+Key3 inserted into BST,BST (Default): (8:8 (3:3) (10:10))
+2
+Minimum value: 3
+2
+Key1 inserted into BST,BST (Default): (8:8 (3:3 (1:1)) (10:10))
+3
+Minimum value: 1
+3
+Maximum value: 10
+3
+Key14 inserted into BST,BST (Default): (8:8 (3:3 (1:1)) (10:10 () (14:14)))
+4
+Maximum value: 14
+4
+Removal failed! Key3 already exists in BST,BST (Default): (8:8 (3:3 (1:1)) (10:10 () (14:14)))
+4
+Key3 removed from BST,BST (Default): (8:8 (1:1) (10:10 () (14:14)))
+3
+Key6 inserted into BST,BST (Default): (8:8 (1:1 () (6:6)) (10:10 () (14:14)))
+4
+Key4 inserted into BST,BST (Default): (8:8 (1:1 () (6:6 (4:4))) (10:10 () (14:14)))
+5
+Key13 inserted into BST,BST (Default): (8:8 (1:1 () (6:6 (4:4))) (10:10 () (14:14 (13:13))))
+6
+Key7 inserted into BST,BST (Default): (8:8 (1:1 () (6:6 (4:4) (7:7))) (10:10 () (14:14 (13:13))))
+6
+Key9 inserted into BST,BST (Default): (8:8 (1:1 () (6:6 (4:4) (7:7))) (10:10 (9:9) (14:14 (13:13))))
+6
+BST (In-order): (1:1) (4:4) (6:6) (7:7) (8:8) (9:9) (10:10) (13:13) (14:14) 
+6
+BST (Pre-order): (8:8) (1:1) (6:6) (4:4) (7:7) (10:10) (9:9) (14:14) (13:13) 
+6
+BST (Post-order): (4:4) (7:7) (6:6) (1:1) (9:9) (13:13) (14:14) (10:10) (8:8) 
+6
+Key8 removed from BST,BST (Default): (9:9 (1:1 () (6:6 (4:4) (7:7))) (10:10 () (14:14 (13:13))))
+6
+BST (Pre-order): (9:9) (1:1) (6:6) (4:4) (7:7) (10:10) (14:14) (13:13) 
+6
+Size: 8
+6
+Key6 removed from BST,BST (Default): (9:9 (1:1 () (7:7 (4:4))) (10:10 () (14:14 (13:13))))
+6
+Size: 7
+6
+Key10 removed from BST,BST (Default): (9:9 (1:1 () (7:7 (4:4))) (14:14 (13:13)))
+5
+Removal failed! Key10 not found in BST,BST (Default): (9:9 (1:1 () (7:7 (4:4))) (14:14 (13:13)))
+5
+key4 found in BST.
+5
+BST (In-order): (1:1) (4:4) (7:7) (9:9) (13:13) (14:14) 
+5
+BST (Pre-order): (9:9) (1:1) (7:7) (4:4) (14:14) (13:13) 
+5
+BST (Post-order): (4:4) (7:7) (1:1) (13:13) (14:14) (9:9) 
+5
