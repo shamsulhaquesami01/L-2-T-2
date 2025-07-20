@@ -80,12 +80,12 @@ void merge(int arr[], int left, int mid, int right) {
     delete[] R;
 }
 void mergesort(int arr[], int left, int right) {
-    if (left < right) {
+    if (right <= left)  return; 
         int mid = left + (right - left) / 2;
         mergesort(arr, left, mid);
         mergesort(arr, mid + 1, right);
-        merge(arr, left, mid, right);
-    }
+      merge(arr, left, mid, right);
+    
 }
 
 
@@ -123,8 +123,8 @@ int main(){
      //bubblesort(arr, n);
     // insertionsort(arr, n);
     // selectionsort(arr, n);
-    // mergesort(arr, 0, n - 1);
-     quicksort(arr, 0, n - 1);
+    mergesort(arr, 0, n - 1);
+     //quicksort(arr, 0, n - 1);
 
     cout << "Sorted array: ";
     for (int i = 0; i < n; i++)
