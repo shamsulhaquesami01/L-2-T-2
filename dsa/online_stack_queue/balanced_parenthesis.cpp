@@ -11,8 +11,6 @@ bool isBalanced(const string& str, int & x) {
     for (char c : str) {
         if (c == '(' || c == '[' || c == '{') {
             s.push(c);
-            // current_depth++;
-            // if(current_depth>max_depth) max_depth = current_depth;
             max_depth = max( max_depth, (int)s.size());
         } else if (c == ')' || c == ']' || c == '}') {
             if (s.empty()) {
@@ -20,7 +18,6 @@ bool isBalanced(const string& str, int & x) {
             }
             char top = s.top();
             s.pop();
-            current_depth--;
             if ((c == ')' && top != '(') ||
                 (c == ']' && top != '[') ||
                 (c == '}' && top != '{')) {
@@ -63,7 +60,7 @@ bool hasDuplicateParentheses(string expr) {
 int main(){
     string s = "([{}]{})";
     string s1 = "{(])}";
-    string s3 = "((a))+(b)+()";
+    string s3 = "((a)+(b)+(";
     int n;
     if(isBalanced(s, n)) cout<<"yes. "<<n<<endl;
     else cout<<"no"<<endl;

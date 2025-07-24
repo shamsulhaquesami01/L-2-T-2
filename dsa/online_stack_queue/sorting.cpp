@@ -30,8 +30,7 @@ void sort_stack(stack<int>& s){
      insert_sorted(s, x);
 }
 
-void sort_no_recursion(stack<int>& st){
-    
+void sort_no_recursion(stack<int>& st){ 
     stack<int> s;
     while(!st.empty()){
         int x = st.top(); st.pop();
@@ -45,7 +44,6 @@ void sort_no_recursion(stack<int>& st){
         st.push(s.top());
         s.pop();
     }
-
 }
 
 int main(){
@@ -56,7 +54,7 @@ int main(){
             int a; cin>>a;
             sami.push(a);
         }
-        sort_no_recursion(sami);
+        sort_stack(sami);
         printstack(sami);
     }
 }

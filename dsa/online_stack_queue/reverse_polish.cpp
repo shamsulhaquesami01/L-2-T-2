@@ -1,10 +1,12 @@
 #include <iostream>
 #include <stack>
-#include <cctype> // for isdigit()
+#include <cctype> 
+// for isdigit()
+#include<string>
 using namespace std;
 
 int main() {
-    
+    string s = string(1,'c');
     string s1 = "123+456*-7*+-89*+";
     stack<int> a; // Store integers, not chars
     //kgf

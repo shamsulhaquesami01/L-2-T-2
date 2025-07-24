@@ -1,7 +1,5 @@
 package Intterface_advance;
 
-import java.lang.classfile.attribute.SourceIDAttribute;
-
 interface A{
     default void show(){
        System.out.println("kutta");
@@ -10,10 +8,10 @@ interface A{
 interface B{
     void show();
 }
-public class One implements A{
+public class One implements firsta {
     @Override
    public  void show(){
-        A.super.show();
+        .super.show();
     }
     public static void main(String[] args) {
         One a = new One();
