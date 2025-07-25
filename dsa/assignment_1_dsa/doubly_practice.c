@@ -92,7 +92,7 @@ struct node *removeDuplicates(struct node *head) {
     struct node *curr = head;
 
     // Traverse each node in the list
-    while (curr != NULL) {
+    while (curr != NULL) { 
         struct node *temp = curr;
 
         // Traverse the remaining nodes to
