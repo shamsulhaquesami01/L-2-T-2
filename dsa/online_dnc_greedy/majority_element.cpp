@@ -3,7 +3,7 @@
 using namespace std;
 int count(int arr[], int l ,int r, int elem){
     int c =0;
-    for(int i=0; i<=r; i++){
+    for(int i=l; i<=r; i++){
         if(arr[i]==elem) c++;
     }
     return c;

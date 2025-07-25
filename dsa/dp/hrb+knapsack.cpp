@@ -9,7 +9,7 @@ int hrbUpdated(vector<int> &val, vector<int> &weight, int n, int W){
     for(int i=1; i<=n; i++){
         for(int w=0; w<=W; w++){
             dp[i][w][0] = max(dp[i-1][w][0], dp[i-1][w][1]);
-            if(w >= weight[i-1]){
+            if(weight[i-1]<= w ){
               dp[i][w][1] = dp[i-1][w-weight[i-1]][0]+val[i-1];  
             }
         }

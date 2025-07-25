@@ -1,3 +1,11 @@
+
+#include<iostream>
+#include<vector>
+#include<string>
+#include<algorithm>
+using namespace std;
+
+
 int minCoins(vector<int>& coins, int sum) {
     vector<int> dp(sum + 1, INT_MAX);  // dp[i] = min coins to make i
     dp[0] = 0;  // 0 coins to make sum 0
