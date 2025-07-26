@@ -18,3 +18,7 @@ void generateBinary(int N) {
     }
     cout << endl;
 }
+
+int main(){
+    generateBinary(5);
+}
