@@ -1,0 +1,127 @@
+/* Overall background for the chat screen */
+.chat-root {
+    -fx-background-color: #282c34; /* Darker, more professional background */
+    -fx-padding: 20px;
+    -fx-font-family: "Inter", sans-serif; /* Modern, clean font */
+}
+
+/* Title of the chat */
+.title-label {
+    -fx-font-size: 28px; /* Larger title */
+    -fx-font-weight: bold;
+    -fx-text-fill: #61dafb; /* A vibrant blue for the title */
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.6), 5, 0.5, 0, 2); /* More subtle shadow */
+    -fx-padding: 0 0 15px 0; /* Padding below title */
+}
+
+/* Scroll Pane containing messages */
+.chat-scroll-pane {
+    -fx-background-color: #1a1e24; /* Dark background for the chat area itself */
+    -fx-background: #1a1e24; /* For ScrollPane's internal background */
+    -fx-border-color: #3a4b55;
+    -fx-border-width: 1px;
+    -fx-border-radius: 12px; /* Rounded corners for the chat box */
+    -fx-background-radius: 12px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.4), 10, 0, 0, 5); /* Clear separation shadow */
+}
+
+/* Message container inside the scroll pane */
+.message-container {
+    -fx-background-color: transparent; /* No background, just for layout */
+}
+
+/* Base style for all chat messages */
+/* style_chat.css */
+
+/* ... (existing styles) ... */
+
+/* Base style for all chat messages */
+.chat-message {
+    -fx-font-size: 15px;
+    -fx-padding: 10px 15px;
+    -fx-background-radius: 18px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 3, 0.2, 0.0, 1.0);
+    /* Ensure no fixed max-width here that could conflict.
+       The JavaFX code will set the dynamic max-width. */
+    /* -fx-max-width: 75%;  <-- REMOVE OR COMMENT OUT THIS LINE if it exists and causes issues */
+    -fx-min-width: 50px; /* Keep a sensible minimum to prevent single-letter collapse */
+    -fx-alignment: center-left; /* Align text within the bubble */
+}
+
+/* User message style */
+.user-message {
+    -fx-background-color: #007bff;
+    -fx-text-fill: white;
+    -fx-background-radius: 18px 18px 2px 18px; /* Rounded top-left, top-right, bottom-left, sharp bottom-right */
+    -fx-border-color: #0056b3;
+    -fx-border-width: 0.5px;
+}
+
+/* Gemini message style */
+.gemini-message {
+    -fx-background-color: #343a40;
+    -fx-text-fill: #e0e0e0;
+    -fx-background-radius: 18px 18px 18px 2px; /* Rounded top-left, top-right, bottom-right, sharp bottom-left */
+    -fx-border-color: #23272b;
+    -fx-border-width: 0.5px;
+}
+
+/* ... (rest of your existing CSS) ... */
+/* Input Field Container (HBox) */
+.input-box {
+    -fx-background-color: #1a1e24; /* Matches chat area background */
+    -fx-background-radius: 12px;
+    -fx-border-color: #3a4b55;
+    -fx-border-width: 1px;
+    -fx-border-radius: 12px;
+    -fx-padding: 10px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 8, 0, 0, 3);
+}
+
+/* Input Field */
+.text-field {
+    -fx-background-color: #2d323a; /* Slightly lighter than container */
+    -fx-text-fill: white;
+    -fx-prompt-text-fill: #a5a5a5;
+    -fx-background-radius: 20px;
+    -fx-padding: 12px 15px; /* More padding */
+    -fx-font-size: 15px;
+    -fx-border-color: #4a5a65;
+    -fx-border-width: 0.5px;
+}
+
+/* Send Button */
+.button {
+    -fx-background-color: #61dafb; /* Vibrant blue, matches title */
+    -fx-font-weight: bold;
+    -fx-text-fill: #282c34; /* Dark text on light button */
+    -fx-font-size: 16px;
+    -fx-padding: 10px 28px; /* More padding */
+    -fx-background-radius: 25px;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 5, 0.2, 0.0, 2.0);
+}
+
+/* Hover effect for the Send button */
+.button:hover {
+    -fx-background-color: #21a1f1; /* Darker blue on hover */
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.4), 8, 0.3, 0.0, 3.0);
+}
+
+/* Back Button */
+.back-button {
+    -fx-background-color: #555555;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-font-size: 15px;
+    -fx-padding: 10px 25px;
+    -fx-background-radius: 25px;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 3, 0.1, 0.0, 1.0);
+}
+
+/* Hover effect for Back button */
+.back-button:hover {
+    -fx-background-color: #777777;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 5, 0.2, 0.0, 2.0);
+}

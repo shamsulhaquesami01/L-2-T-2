@@ -1,0 +1,118 @@
+/* General styles for screens like SplashScreen, LoginScreen, MainMenu */
+
+.root {
+    -fx-background-image: url("../img/mainmenu.png");
+     -fx-background-size: cover;
+     -fx-background-repeat: no-repeat;
+     -fx-background-position: center center;
+     -fx-font-family: "Segoe UI", sans-serif;
+}
+
+/* Titles */
+.title-label {
+-fx-font-family: "Poppins", sans-serif;
+/* Modern font */
+    -fx-font-size: 40px;
+    -fx-font-weight: bold;
+    -fx-text-fill:  rgba(160, 122, 75, 1); /* Light grey text */
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.7), 10, 0, 0, 5); /* Soft shadow */
+    -fx-padding: 20px;
+}
+
+.login-title {
+    -fx-font-family: "Georgia", serif;
+    -fx-font-size: 36px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #00BCD4; /* Cyan color */
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.7), 10, 0, 0, 5);
+    -fx-padding: 15px;
+}
+
+/* Buttons */
+.menu-button{
+     -fx-background-color: rgba(0, 0, 0, 0.6);
+       -fx-text-fill: #ffffff;
+       -fx-font-weight: bold;
+       -fx-font-size: 14px;
+       -fx-padding: 8 20;
+       -fx-background-radius: 12;
+       -fx-border-color: rgb(160, 122, 75);
+       -fx-border-width: 1.2px;
+       -fx-border-radius: 15;
+       -fx-cursor: hand;
+        -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 5, 0, 0, 2);
+        -fx-pref-width: 150px;
+                   -fx-pref-height: 56px;
+}
+
+.menu-button:hover{
+    -fx-background-color: rgba(160, 122, 75, 0.2);
+     -fx-text-fill: white;
+     -fx-border-color: white;
+     -fx-effect: dropshadow(gaussian, rgba(160, 122, 75, 0.8), 8, 0.8, 0, 2);
+}
+.menu-button:focused{
+  -fx-background-color: rgba(160, 122, 75, 0.2);
+     -fx-text-fill: white;
+     -fx-border-color: white;
+     -fx-effect: dropshadow(gaussian, rgba(160, 122, 75, 0.8), 8, 0.8, 0, 2);
+}
+.menu-button:pressed{
+    -fx-background-color: #1a5276; /* Darker blue on press */
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.9), 3, 0, 0, 1);
+    -fx-scale-x: 0.98;
+    -fx-scale-y: 0.98;
+}
+
+/* Splash Screen specific */
+.splash-root {
+     -fx-background-color: #1a1a2e; /* Dark blue background */
+     -fx-background-image: url("../img/hello2.png"); /* Optional textured bg */
+     -fx-background-size: cover;
+     -fx-padding: 40px;
+ }
+
+ .splash-icon {
+     -fx-effect: dropshadow(three-pass-box, rgba(255,215,0,0.5), 15, 0.5, 0, 0);
+ }
+
+ .splash-title {
+     -fx-font-family: 'Montserrat', sans-serif;
+     -fx-font-size: 42px;
+     -fx-font-weight: 800;
+     -fx-text-fill: #ffffff;
+     -fx-letter-spacing: 3px;
+     -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.7), 10, 0, 0, 2);
+ }
+
+ .splash-loading {
+     -fx-font-family: 'Segoe UI', sans-serif;
+     -fx-font-size: 18px;
+     -fx-text-fill: #a07a4b; /* Gold accent */
+     -fx-font-style: italic;
+     -fx-padding: 10px 0;
+ }
+
+ /* Optional animation for "Loading..." */
+ @keyframes blink {
+     0%, 100% { opacity: 1; }
+     50% { opacity: 0.5; }
+ }
+
+ .splash-loading {
+     -fx-animation: blink 1.5s infinite;
+ }
+/* Welcome text */
+.welcome-label {
+    -fx-font-size: 24px;
+    -fx-text-fill: rgba(160, 122, 75, 1);
+    -fx-font-weight: bold;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 2, 0, 0, 1);
+}
+
+/* Status bar */
+.status-bar {
+    -fx-text-fill: #a07a4b;
+    -fx-font-size: 14px;
+    -fx-font-style: italic;
+}

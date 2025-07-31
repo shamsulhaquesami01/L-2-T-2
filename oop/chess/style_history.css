@@ -1,0 +1,235 @@
+/* Game History Screen Styles */
+
+.root {
+    -fx-background-color: linear-gradient(to bottom, #1a1a2e, #16213e, #0f3460);
+    -fx-font-family: "Segoe UI", Arial, sans-serif;
+}
+
+/* Header Styles */
+.history-header {
+    -fx-background-color: rgba(255, 255, 255, 0.1);
+    -fx-border-color: rgba(255, 255, 255, 0.2);
+    -fx-border-width: 0 0 2 0;
+}
+
+.history-title {
+    -fx-font-size: 32px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #ffffff;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 5, 0, 0, 2);
+}
+
+.history-subtitle {
+    -fx-font-size: 16px;
+    -fx-text-fill: #b8c6db;
+    -fx-font-weight: 500;
+}
+
+/* Content Styles */
+.history-content {
+    -fx-background-color: transparent;
+}
+
+.history-scroll {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+}
+
+.history-scroll .viewport {
+    -fx-background-color: transparent;
+}
+
+.history-scroll .scroll-bar:vertical {
+    -fx-background-color: rgba(255, 255, 255, 0.1);
+    -fx-border-color: transparent;
+}
+
+.history-scroll .scroll-bar:vertical .track {
+    -fx-background-color: rgba(255, 255, 255, 0.05);
+    -fx-border-color: transparent;
+}
+
+.history-scroll .scroll-bar:vertical .thumb {
+    -fx-background-color: rgba(255, 255, 255, 0.3);
+    -fx-border-color: transparent;
+    -fx-background-radius: 5;
+}
+
+/* Statistics Section */
+.stats-section {
+    -fx-background-color: rgba(255, 255, 255, 0.08);
+    -fx-background-radius: 10;
+    -fx-padding: 20;
+    -fx-border-color: rgba(255, 255, 255, 0.2);
+    -fx-border-width: 1;
+    -fx-border-radius: 10;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 10, 0, 0, 0);
+}
+
+.stats-title {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #ffffff;
+    -fx-alignment: center;
+}
+
+.stats-grid {
+    -fx-background-color: transparent;
+}
+
+.stat-label {
+    -fx-font-size: 12px;
+    -fx-font-weight: 600;
+    -fx-text-fill: #b8c6db;
+    -fx-text-alignment: center;
+    -fx-alignment: center;
+}
+
+.stat-value {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #ffffff;
+    -fx-text-alignment: center;
+    -fx-alignment: center;
+}
+
+.stat-value.wins {
+    -fx-text-fill: #27ae60;
+}
+
+.stat-value.losses {
+    -fx-text-fill: #e74c3c;
+}
+
+.stat-value.draws {
+    -fx-text-fill: #f39c12;
+}
+
+.stat-value.win-rate {
+    -fx-text-fill: #3498db;
+}
+
+/* Separator */
+.history-separator {
+    -fx-background-color: rgba(255, 255, 255, 0.2);
+    -fx-border-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Matches Header */
+.matches-header {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #ffffff;
+    -fx-padding: 10 0 5 0;
+}
+
+/* Match Card Styles */
+.match-card {
+    -fx-background-color: rgba(255, 255, 255, 0.06);
+    -fx-background-radius: 8;
+    -fx-padding: 15;
+    -fx-border-color: rgba(255, 255, 255, 0.1);
+    -fx-border-width: 1;
+    -fx-border-radius: 8;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 5, 0, 0, 1);
+    -fx-cursor: hand;
+}
+
+.match-card:hover {
+    -fx-background-color: rgba(255, 255, 255, 0.1);
+    -fx-border-color: rgba(255, 255, 255, 0.2);
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 8, 0, 0, 2);
+}
+
+.match-date {
+    -fx-font-size: 12px;
+    -fx-text-fill: #95a5a6;
+    -fx-font-weight: 500;
+}
+
+.match-players {
+    -fx-font-size: 14px;
+    -fx-text-fill: #ffffff;
+    -fx-font-weight: 600;
+}
+
+.match-result {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-padding: 4 8;
+    -fx-background-radius: 4;
+    -fx-border-radius: 4;
+}
+
+.result-win {
+    -fx-background-color: rgba(39, 174, 96, 0.2);
+    -fx-text-fill: #27ae60;
+    -fx-border-color: #27ae60;
+    -fx-border-width: 1;
+}
+
+.result-loss {
+    -fx-background-color: rgba(231, 76, 60, 0.2);
+    -fx-text-fill: #e74c3c;
+    -fx-border-color: #e74c3c;
+    -fx-border-width: 1;
+}
+
+.result-draw {
+    -fx-background-color: rgba(243, 156, 18, 0.2);
+    -fx-text-fill: #f39c12;
+    -fx-border-color: #f39c12;
+    -fx-border-width: 1;
+}
+
+.match-outcome {
+    -fx-font-size: 12px;
+    -fx-text-fill: #bdc3c7;
+    -fx-font-style: italic;
+}
+
+/* No Records Label */
+.no-records-label {
+    -fx-font-size: 18px;
+    -fx-text-fill: #95a5a6;
+    -fx-font-style: italic;
+    -fx-text-alignment: center;
+    -fx-alignment: center;
+    -fx-padding: 50;
+}
+
+/* Back Button */
+.back-button {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #ffffff;
+    -fx-background-color: linear-gradient(to bottom, #3498db, #2980b9);
+    -fx-background-radius: 8;
+    -fx-border-color: transparent;
+    -fx-border-radius: 8;
+    -fx-padding: 12 24;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 5, 0, 0, 2);
+}
+
+.back-button:hover {
+    -fx-background-color: linear-gradient(to bottom, #5dade2, #3498db);
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.4), 8, 0, 0, 3);
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+}
+
+.back-button:pressed {
+    -fx-background-color: linear-gradient(to bottom, #2980b9, #1f618d);
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 3, 0, 0, 1);
+    -fx-scale-x: 0.98;
+    -fx-scale-y: 0.98;
+}
+
+.back-button:focused {
+    -fx-border-color: #74b9ff;
+    -fx-border-width: 2;
+    -fx-border-radius: 8;
+}

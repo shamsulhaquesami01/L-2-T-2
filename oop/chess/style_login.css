@@ -1,0 +1,59 @@
+.root {
+        -fx-background-image: url("../img/bg.png");
+        -fx-background-repeat: no-repeat;
+        -fx-background-size: cover;/* or contain */
+        -fx-background-position: center center;
+        -fx-font-family: 'Segoe UI', sans-serif;
+}
+
+.label-title {
+    -fx-font-size: 28px;
+    -fx-text-fill: #00d2ff;
+    -fx-effect: dropshadow(gaussian, black, 2, 0.5, 0.0, 0.0);
+    -fx-font-weight: bold;
+}
+
+.msg {
+    -fx-font-size: 12px;
+    -fx-text-fill: #cccccc;
+    -fx-effect: dropshadow(gaussian, black, 2, 0.5, 0.0, 0.0);
+    -fx-font-weight: bold;
+}
+.text-field, .password-field {
+    -fx-background-color: rgba(0, 0, 0, 0.6);
+    -fx-text-fill: white;
+    -fx-prompt-text-fill: #cccccc;
+    -fx-background-radius: 15;
+    -fx-border-color: transparent;
+    -fx-border-radius: 15;
+    -fx-padding: 8px;
+    -fx-font-size: 13px;
+
+    /* SIZE */
+    -fx-min-width: 280px;
+    -fx-max-width: 280px;
+
+    /* EFFECT */
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.25), 4, 0.5, 1, 1);
+}
+
+
+.button {
+    -fx-background-color: rgba(0, 0, 0, 0.6);
+    -fx-text-fill: #ffffff;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+    -fx-padding: 8 20;
+    -fx-background-radius: 12;
+    -fx-border-color: rgb(160, 122, 75);
+    -fx-border-width: 1.2px;
+    -fx-border-radius: 12;
+    -fx-cursor: hand;
+}
+
+.button:hover {
+    -fx-background-color: rgba(160, 122, 75, 0.2);
+    -fx-text-fill: white;
+    -fx-border-color: white;
+    -fx-effect: dropshadow(gaussian, rgba(160, 122, 75, 0.8), 8, 0.8, 0, 2);
+}

@@ -22,7 +22,7 @@ int MCM(vector<int> &dim){
 }
 
 int main(){
-        int temp[] = {30,35,15,5,10,20,25};
+        int temp[] = {15,5,50,20,10,35,25};
 vector<int> hval(temp, temp + sizeof(temp)/sizeof(temp[0]));
 cout<<MCM(hval);
 }

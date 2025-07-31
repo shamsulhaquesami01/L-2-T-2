@@ -1,0 +1,29 @@
+/* ===== WAITING SCREEN STYLES ===== */
+.waiting-root {
+    -fx-background-color: #2D2D2D;
+    -fx-padding: 40px;
+}
+
+.waiting-message {
+-fx-font-family: "Georgia", serif;
+    -fx-text-fill: #E0E0E0;
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.5), 2, 0, 0, 1);
+}
+
+.player-label {
+    -fx-text-fill: #A07A4B; /* Gold accent to match your theme */
+    -fx-font-size: 22px;
+    -fx-font-style: italic;
+}
+
+.waiting-progress {
+    -fx-progress-color: #A07A4B; /* Gold accent */
+    -fx-scale-x: 1.5;
+    -fx-scale-y: 1.5;
+}
+
+.waiting-icon {
+    -fx-effect: dropshadow(three-pass-box, rgba(160,122,75,0.5), 10, 0, 0, 0);
+}
